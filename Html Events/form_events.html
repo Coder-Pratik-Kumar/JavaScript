@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_events</title>
+</head>
+<body>
+    <form onsubmit="alert('form submitted')">
+        <input type="text" name="name">
+        <input type="submit" value="submit">
+    </form>
+    <select onchange="alert('option changed!')">
+        <option value="A">Option A</option>
+        <option value="B">Option B</option>
+    </select>
+    <input type="text" onfocus="alert('focused!')">
+    <input type="text" onblur="alert('blured!')">
+</body>
+</html>
