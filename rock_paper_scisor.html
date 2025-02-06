@@ -25,7 +25,20 @@
     ">Reset score</button>
     <script>
             
-            const score=JSON.parse(localStorage.getItem('score'));
+            const score=JSON.parse(localStorage
+            .getItem('score')) ||{
+                Wins:0,
+                Loses:0,
+                Ties:0
+            } ;
+
+            // if(score === null){
+            //     score={
+            //         Wins:0,
+            //         Loses:0,
+            //         Ties:0
+            //     };
+            // }
 
             function PlayGame(PlayerMove){
                 const computerChoice = computerMove();

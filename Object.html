@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const product={
+            name: 'Bags',
+            price: 200+'$'
+        };
+        console.log(product.name);
+        console.log(product);
+        console.log(product.delivery);
+        
+        product.delivery='2 days ago';
+        console.log(product);
+
+        delete product.delivery;
+        console.log(product);
+        
+        console.log(product ['name']);
+
+        const product2={
+            name :product.name,
+            method(){
+                console.log('hii');
+            }
+        }
+        console.log(product2.method());
+        console.log(product2);
+        
+        const obj1={
+            message : 'Hello'  // reference of obj1 
+        }
+
+        const obj2=obj1;  // copy the reference of obj1
+        
+        const obj3 ={
+            message:'Hello'  // create a different refernce location
+        }
+
+        console.log(obj2 === obj1); // true because they point out same reference
+        console.log(obj3 === obj1);// false because they point out different reference
+        
+        // Now Learning about Local storage in javascript
+        const message=localStorage.getItem('message') // message is a key
+        localStorage.setItem('message' ,'hello'); // hello is the value of this key "message"
+        console.log(message);
+        // ***** local storage only support only string ********
+        localStorage.removeItem(message);
+        console.log(message);
+        
+        // so to convert javascript object into JSOn string then we use some built in methods
+        
+        const newobj={
+            name:'prtaik',
+            RollNo:2415
+        }
+        const JSONobj=JSON.stringify(newobj);
+        console.log(JSONobj);
+
+        // To covert JSOn objec6t we use parse methd
+
+        console.log(JSON.parse(JSONobj));
+        
+        
+        
+        
+    </script>
+</body>
+</html>
